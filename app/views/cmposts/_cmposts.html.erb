@@ -1,0 +1,16 @@
+<ul class="list-unstyled">
+  <% cmposts.each do |cmpost| %>
+    <li class="media mb-3">
+      <img class="mr-2 rounded" src="<%= gravatar_url(cmpost.user, { size: 50 }) %>" alt="">
+      <div class="media-body">
+        <div>
+          <%= link_to cmpost.user.name, user_path(cmpost.user) %> <span class="text-muted">posted at <%= cmpost.created_at %></span>
+        </div>
+        <div>
+          <p><%= cmpost.content %></p>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  <%= paginate cmposts %>
+</ul>
