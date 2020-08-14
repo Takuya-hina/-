@@ -1,0 +1,484 @@
+/*全ページの左右の余白を削除するため*/
+.container-fluid{
+	padding:0;
+}
+
+.jumbotron-fluid{
+  padding:0;
+}
+
+/*toppage index*/
+#main-jumbo{
+	width:100%;
+	height: 0;
+	padding-top: 60%;
+	position:relative;
+	background-image: url("top.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	margin-bottom:0;
+}
+
+.cont{
+	position: absolute;
+    top: 30%;
+    left: 10%;
+}
+#main-jumbo h1{
+	color: white;
+}
+
+#main-jumbo p{
+	color: white;
+}
+
+#main-jumbobutton{
+	color: dimgrey;
+	font-size: 1.0em;
+	font-weight: bold;
+	background-color: #f5f5f5;
+	padding: 15px 20px;
+	border-radius: 5px;
+	border-style: none;	
+}
+
+@media (min-width: 992px) {
+ #main-jumbo h1 {
+   font-size: 6.0rem;
+ }
+ #main-jumbo p{
+ 	font-size:3.0rem;
+ }
+ #main-jumbobutton{
+ 	font-size:1.0rem;
+ }
+}
+
+@media (max-width: 991.98px) {
+
+ #main-jumbo h1 {
+   font-size: 4.0rem;
+ }
+ #main-jumbo p{
+ 	font-size:2.5rem;
+ }
+ #main-jumbobutton{
+ 	font-size:1rem;
+ }
+}
+
+@media (max-width: 767.98px) {
+
+ #main-jumbo h1 {
+   font-size: 3.0rem;
+ }
+ #main-jumbo p{
+ 	font-size:1.5rem;
+ }
+ #main-jumbobutton{
+ 	font-size:1rem;
+ }
+}
+
+@media (max-width: 575.98px) {
+
+ #main-jumbo h1 {
+   font-size: 2.0rem;
+ }
+ #main-jumbo p{
+ 	font-size:1.8rem;
+ }
+ #main-jumbobutton{
+ 	font-size:1rem;
+ 	padding:5px 5px;
+ }
+}
+
+@media (max-width: 415.98px) {
+ .cont{
+	margin-top:-2rem;
+}
+ #main-jumbo h1 {
+   font-size: 1rem;
+ }
+ #main-jumbo p{
+ 	font-size:1rem;
+ }
+ #main-jumbobutton{
+ 	font-size:0.7rem;
+ 	padding:5px 5px;
+ }
+}
+
+@media (max-width: 375.98px) {
+.cont{
+	margin-top:-2rem;
+}
+ #main-jumbo h1 {
+   font-size: 1rem;
+ }
+ #main-jumbo p{
+ 	font-size:1rem;
+ }
+ #main-jumbobutton{
+ 	font-size:0.7rem;
+ 	padding:5px 5px;
+ }
+}
+
+/*toppage tos解説部分*/
+.page-section {
+    padding: 8rem 0;
+    background-color: #FF6633;
+}
+
+
+.second-title{
+	text-align: center;
+  　font-size: 35px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+.second-head{
+	background-color: red;
+}
+
+/*toppage画像と文字が半々の部分（showcase）*/
+
+#showcase-img-1{
+	background-image: url('start.jpg');
+}
+
+#showcase-img-2{
+	background-image: url('record.jpg');
+}
+
+#showcase-img-3{
+	background-image: url('share.jpg');
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+/*toppage　他ユーザーリスト、挑戦を探す*/
+.third-colum{
+	background-color: #f1f0f0;
+	text-align: center;
+	color:#6a6a6a;
+	width: 100%;
+	height: 460px;
+}
+
+.users{
+	background-color: #FF6633;
+	color: white;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border-style: none;
+	margin-top: 15px;
+}
+
+/*↓フッターCSS */
+.last-foot{
+  border-top: 1px solid #f7f7f7;
+}
+
+/*↓ユーザーリストに関するCSS */
+.users-image h1 {
+	padding-top: 300px;
+	padding-left: 150px;
+	font-size:80px;
+	color: white;
+}
+
+.users-p{
+	padding-left: 150px;
+	color: white;
+}
+
+#users-jumbo{
+	width:100%;
+	height: 0;
+	padding-top: 55%;
+	position:relative;
+	background-image: url("users.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+
+.cont{
+	position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#users-jumbo h1{
+	color: white;
+}
+
+#users-jumbo p{
+	color: white;
+}
+
+#users-jumbobutton{
+	color: dimgrey;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: #f5f5f5;
+	padding: 15px 20px;
+	border-radius: 5px;
+	border-style: none;	
+}
+
+@media (min-width: 992px) {
+ #users-jumbo h1 {
+   font-size: 2.8rem;
+ }
+ #users-jumbo p{
+ 	font-size:1.8rem;
+ }
+ #users-jumbobutton{
+ 	font-size:1.0rem;
+ }
+}
+
+@media (max-width: 991.98px) {
+ #users-jumbo h1 {
+   font-size: 2.0rem;
+ }
+ #users-jumbo p{
+ 	font-size:1.2rem;
+ }
+ #users-jumbobutton{
+ 	font-size:0.8rem;
+ }
+}
+
+@media (max-width: 767.98px) {
+ #users-jumbo h1,p {
+   font-size: 1.5rem;
+ }
+}
+
+@media (max-width: 575.98px) {
+ #users-jumbo h1 {
+   font-size: 1.0rem;
+ }
+ #users-jumbo p{
+ 	font-size:0.8rem;
+ }
+ #users-jumbobutton{
+ 	font-size:0.7rem;
+ 	padding:5px 5px;
+ }
+}
+
+@media (max-width: 375.98px) {
+ #users-jumbo h1 {
+   font-size: 0.8rem;
+ }
+ #users-jumbo p{
+ 	font-size:0.6rem;
+ }
+ #users-jumbobutton{
+ 	font-size:0.7rem;
+ 	padding:5px 5px;
+ }
+ 
+ #rank h1{
+  font-size:30px;
+ }
+}
+
+#usercard{
+	width: 20rem;
+	margin:0 auto;
+}
+
+#usershow-card{
+	margin: 20px;
+}
+
+#a{
+	margin-left: 15px;
+}
+
+.usertop-right p{
+	width: 100px;
+	height: 100px;
+}
+
+/*↓user詳細トップ部分*/
+.user-top{
+	display: flex;
+	width: 100%;
+	height: 470px;
+ background-color:#FB6634;
+}
+
+/* ↓link_to文字色変更のため*/
+.link,.link-top-1,.link-navuser{
+	color: #808080;
+	text-decoration:none !important;
+}
+
+.user-link,.link-top-2{
+	color: white;
+	text-decoration:none !important;
+}
+
+.userbutton-container{
+	display: flex;
+}
+
+/* ↓インフルエンスカウント↓*/
+#influence{
+	font-size: 50px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 17vw;
+}
+
+/* ↓ランキングページアイコンカラー↓*/
+.fa-crown{
+	color: #FFCC33;
+}
+#silver{
+	color: #C0C0C0;
+}
+
+#brown{
+	color: #996633;
+}
+/* ↓フッターカラー指定↓*/
+.foot-icon {
+  color: #212529;
+  transition: all 0.2s;
+}
+
+.last-foot{
+	background-color: #FF6633;
+}
+
+.show-wrapper{
+	height: 600px;
+}
+
+/* ↓コンテンツ不足のフッター下部固定↓*/
+.wrapper{
+    min-height:50vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+.last-foot-persol{
+    width: 100%;
+    background-color: #FF6633;
+    position: absolute;
+    bottom: 0;
+}
+
+/*退会ボタンの色設定*/
+.destroy-users{
+  font-size: 12px;
+  color: red;
+}
+
+/*エピソード投稿画像と動画の*/
+.episodeimage{
+  max-width: 50%;
+}
+
+/*レスポンシブスマホ対応*/
+
+@media (max-width: 415.98px) {
+ #rank h1{
+  font-size:25px;
+ }
+ 
+ #about h2,p{
+  font-size:1rem;
+ }
+ 
+ .showcase h2{
+  font-size:1.3rem;
+ }
+ 
+ .showcase p{
+  font-size:1rem;
+ }
+ 
+ .fa-users{
+  font-size:1.5rem;
+ }
+ 
+ .third,.users{
+  font-size:0.8rem;
+ }
+ 
+ .influencer h2{
+  font-size:1.5rem;
+ }
+ .showcase .showcase-img {
+  min-height: 15rem;
+  background-size: cover;
+}
+}
+
+@media (max-width: 770.98px) {
+ #rank h1{
+  font-size:25px;
+ }
+ 
+ #about h2,p{
+  font-size:1rem;
+ }
+ 
+ .showcase h2{
+  font-size:1.3rem;
+ }
+ 
+ .showcase p{
+  font-size:1rem;
+ }
+ 
+ .fa-users{
+  font-size:1.5rem;
+ }
+ 
+ .third,.users{
+  font-size:0.8rem;
+ }
+  .influencer h2{
+  font-size:1.5rem;
+ }
+}
+
+@media (max-width: 769px) {
+ .fa-users{
+  font-size:3rem;
+ }
+ 
+ .third,.users{
+  font-size:1.1rem;
+ }
+
+}

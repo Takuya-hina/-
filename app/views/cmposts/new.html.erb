@@ -1,2 +1,5 @@
-<h1>Cmposts#new</h1>
-<p>Find me in app/views/cmposts/new.html.erb</p>
+<h1>作成ページ</h1>
+
+<%= render 'form', cmpost: @cmpost %>
+
+<%= link_to '一覧に戻る',root_path %>

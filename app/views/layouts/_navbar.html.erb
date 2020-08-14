@@ -1,6 +1,6 @@
 <header class="mb-4">
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">CM</a>
+    <a class="navbar-brand" href="/"><%= image_tag ("logo.png"), size: '50x50'%></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,7 @@
         <% if logged_in? %>
           <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
           <li class="nav-item"><a href="#" class="nav-link">お気に入り</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">CMの追加</a></li>
+          <li class="nav-item"><%= link_to 'CMを投稿', new_cmpost_path, class: 'nav-link' %></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %></a>
             <ul class="dropdown-menu dropdown-menu-right">

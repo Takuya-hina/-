@@ -1,2 +1,28 @@
-<h1>Cmposts#show</h1>
-<p>Find me in app/views/cmposts/show.html.erb</p>
+<h1>詳細ページ</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>URL</th>
+    <td><%= @cmpost.cm_url %></td>
+  </tr>
+  <%= render "likes/like", cmpost: cmpost %>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @cmpost.cm_title %></td>
+  </tr>
+  <tr>
+    <th>商品名</th>
+    <td><%= @cmpost.cm_service %></td>
+  </tr>
+  <tr>
+    <th>楽曲</th>
+    <td><%= @cmpost.cm_music %></td>
+  </tr>
+  <tr>
+    <th>コンテンツ</th>
+    <td><%= @cmpost.content %></td>
+  </tr>
+</table>
+
+<%= link_to 'この投稿を編集する', edit_cmpost_path(@cmpost), class: 'btn btn-light' %>
+<%= link_to 'この投稿を削除する', @cmpost, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>

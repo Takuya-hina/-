@@ -10,14 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_061339) do
+ActiveRecord::Schema.define(version: 2020_08_14_064316) do
 
   create_table "cmposts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cm_url"
+    t.string "cm_title"
+    t.string "cm_service"
+    t.string "cm_music"
     t.index ["user_id"], name: "index_cmposts_on_user_id"
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "cmpost_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cmpost_id"], name: "index_likes_on_cmpost_id"
+    t.index ["user_id", "cmpost_id"], name: "index_likes_on_user_id_and_cmpost_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
