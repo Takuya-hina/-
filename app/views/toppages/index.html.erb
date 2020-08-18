@@ -1,7 +1,9 @@
 <% if logged_in? %>
   <div class="row">
     <div class="col-sm-8">
+    <h1>CM一覧</h1>
       <%= render 'cmposts/cmposts', cmposts: @cmposts %>
+    <%= link_to '新規投稿の作成', new_cmpost_path, class: "btn btn-primary" %>
     </div>
   </div>
 <% else %>
