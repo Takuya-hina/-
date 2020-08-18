@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_064316) do
+ActiveRecord::Schema.define(version: 2020_08_14_085024) do
 
   create_table "cmposts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_064316) do
     t.string "cm_title"
     t.string "cm_service"
     t.string "cm_music"
+    t.integer "likes_count", default: 0, null: false
     t.index ["user_id"], name: "index_cmposts_on_user_id"
   end
 

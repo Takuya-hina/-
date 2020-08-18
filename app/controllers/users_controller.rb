@@ -7,11 +7,10 @@ class UsersController < ApplicationController
 
   def show
      @user = User.find(params[:id])
+     @cmposts = @user.cmposts.order(id: :desc).page(params[:page])
+     counts(@user)
   end
-  
-  def favorites
-     @user = User.find(params[:id])
-  end
+
   
   def new
      @user = User.new

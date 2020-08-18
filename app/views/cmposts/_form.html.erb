@@ -13,7 +13,7 @@
   <% end %>
   
    <div class="form-group">
-    <%= f.label :cm_url, 'CM動画' %>
+    <%= f.label :cm_url, 'Youtube URL' %>
     <%= f.text_field :cm_url, class: 'form-control' %>
   </div>
 
@@ -33,8 +33,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :content, 'コンテンツ' %>
-    <%= f.text_field :content, class: 'form-control' %>
+    <%= f.label :content, 'エピソード' %>
+    <%= f.text_area :content, class: 'form-control', rows: 10 %>
   </div>
 
 

@@ -1,16 +1,12 @@
 class CmpostsController < ApplicationController
-  before_action :require_user_logged_in
+ before_action :require_user_logged_in
   
- before_action :correct_user, only: [:show, :edit, :update, :destroy]
-  def _cmposts
-    if logged_in?
-      @cmpost = current_user.cmposts.build  # form_with 用
-      @cmposts = current_user.cmoposts.order(id: :desc).page(params[:page])
-    end 
+ before_action :correct_user, only: [:edit, :update, :destroy]
+  def index
+  
   end
-  
   def show
-   
+     @cmpost = Cmpost.find(params[:id])
   end
 
   def new
@@ -18,7 +14,11 @@ class CmpostsController < ApplicationController
   end
 
   def create
-     @cmpost = current_user.cmposts.build(cmpost_params)
+    @cmpost = current_user.cmposts.build(cmpost_params)
+     
+     url = params[:cmpost][:cm_url]
+     url = url.last(11)
+     @cmpost.cm_url = url
      
     if @cmpost.save
       flash[:success] = 'CMを投稿しました。'

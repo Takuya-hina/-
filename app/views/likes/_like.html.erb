@@ -1,18 +1,25 @@
-<% if !current_user?(cmpost.user) %>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" /></head>
+<% unless current_user == cmpost.user %>
     <span class="like">
     <% if cmpost.iine?(current_user) %>
       <%= form_for(cmpost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
-        <%= button_tag(class: "btn btn-default btn-xs") do %>
-          <%= content_tag :span, "#", class: "glyphicon glyphicon-heart" %>
+      <%= button_tag(class: "btn btn-default btn-lg") do %>
+        <span class="fa-layers fa-2x" >
+    　　　　　　<i class="fas fa-thumbs-up"></i>
+            <span class="fa-layers-counter" style="background:Tomato"><%= cmpost.likes_count %></span>
+            </span>
         <% end %>
-      <% end %>
-    <% else %>
+        <% end %>
+      <% else %>
       <%= form_for(cmpost.likes.build, remote: true) do |f| %>
-        <div><%= hidden_field_tag :cmpost_id, cmpost.id %></div>
-        <%= button_tag(class: "btn btn-default btn-xs") do %>
-          <%= content_tag :span, "#", class: "glyphicon glyphicon-heart-empty" %>
+        <%= hidden_field_tag :cmpost_id, cmpost.id %>
+        <%= button_tag(class: "btn btn-default btn-lg") do %>
+          <span class="fa-layers fa-2x faa-vertical animated" >
+    　　　　　　<i class="far fa-thumbs-up"></i>
+            <span class="fa-layers-counter" style="background:Tomato"><%= cmpost.likes_count %></span>
+          </span>
         <% end %>
       <% end %>
     <% end %>
-  </span>
+    </span>
 <% end %>

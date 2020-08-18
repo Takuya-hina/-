@@ -3,17 +3,17 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>URL</th>
         <th>タイトル</th>
         <th>商品名</th>
+        <th>楽曲</th>
       </tr>
     </thead>
     <tbody>
       <% @cmposts.each do |cmpost| %>
         <tr>
-          <td><%= link_to cmpost.cm_url, cmpost %></td>
-          <td><%= cmpost.cm_title %></td>
+          <td><%= link_to cmpost.cm_title, cmpost %></td>
           <td><%= cmpost.cm_service %></td>
+          <td><%= cmpost.cm_music %></td>
         </tr>
       <% end %>
     </tbody>
