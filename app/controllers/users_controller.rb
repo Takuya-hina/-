@@ -30,7 +30,8 @@ class UsersController < ApplicationController
   
   def likes
     @user = User.find(params[:id])
-    @likes = @user.likes.page(params[:page])
+    ids = @user.likes.pluck(:cmpost_id)
+    @likes = Cmpost.where(id: ids).page(params[:page]) 
     counts(@user)
   end
   

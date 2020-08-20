@@ -19,7 +19,7 @@ class AddLikesCountToCmposts < ActiveRecord::Migration[5.2]
   def _up
     MigrationUser.reset_column_information
 
-    add_column :cmposts, :likes_count, :integer, null: false, default: 0 unless column_exists? :cmposts, :likes_count
+    add_column :cmposts, :likes_count, :integer, null: false, default:0 unless column_exists? :cmposts, :likes_count
   end
 
   def _down
