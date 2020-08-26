@@ -6,14 +6,18 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
+  get 'search', to: 'toppages#search', as: :search
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :new, :create]do
     member do
-   get :likes
+      get :likes
     end
   end
-  resources:cmposts
-  
+  resources:cmposts do
+    member do
+      get :ranks
+    end
+  end
   resources :likes, only: [:create, :destroy]
  
 end

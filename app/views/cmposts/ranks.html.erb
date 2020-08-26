@@ -1,0 +1,21 @@
+<h1>お気に入りランキング</h1>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>商品名</th>
+        <th>楽曲</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @all_ranks.each.with_index(1) do |cmpost, i| %>
+        <tr>
+          <td>第<%= i %>位　<%= link_to cmpost.cm_title, cmpost %></td>
+          <td><%= cmpost.cm_service %></td>
+          <td><%= cmpost.cm_music %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to '一覧に戻る', root_path, class: 'btn btn-primary' %>
+  

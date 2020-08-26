@@ -5,6 +5,7 @@ class CmpostsController < ApplicationController
   def index
   
   end
+  
   def show
      @cmpost = Cmpost.find(params[:id])
   end
@@ -47,7 +48,10 @@ class CmpostsController < ApplicationController
     @cmpost.destroy
     flash[:success] = '投稿は正常に削除されました'
      redirect_to root_url
+  end
   
+  def ranks
+    @all_ranks = Cmpost.find(Like.group(:cmpost_id).order('count(cmpost_id) desc').limit(5).pluck(:cmpost_id))
   end
   
   private
