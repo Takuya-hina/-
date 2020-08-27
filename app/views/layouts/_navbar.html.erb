@@ -1,4 +1,4 @@
-<header>
+<header class="mb-4">
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="/"><%= image_tag ("logo.png"), size: '50x50'%></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -6,7 +6,7 @@
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      <ul class="navbar-nav ">
+      <ul class="navbar-nav">
         <% if logged_in? %>
           <li class="nav-item"><%= link_to "お気に入り一覧",likes_user_path(current_user), class: "nav-link" %>
           <li class="nav-item"><%= link_to "ランキング", ranks_cmpost_path(current_user), class: "nav-link" %></li>
