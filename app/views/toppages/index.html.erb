@@ -13,8 +13,8 @@
   <%= render 'cmposts/cmposts', cmposts: @cmposts %>
   <%= link_to '新規投稿の作成', new_cmpost_path, class: "btn btn-primary" %>
 <% else %>
- <div class="jumbotron jumbotron-fluid" id="main-jumbo">
-   <div class="cont">
+  <div class="center jumbotron">
+    <div class="text-center">
      <h1 class="display-4 mt-5 font-weight-bold">Welcome to the CMposts</h1>
      <p class="lead mt-3 font-weight-bold">CMはもっと面白く見れる！！</p>
      <%= link_to 'Sign up now', signup_path, class: 'btn btn-lg btn-danger' %>
