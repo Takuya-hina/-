@@ -4,7 +4,7 @@
  <div class="input-group">
    <div class="form-group" style="display: flex">
      <%= form_tag(search_path,:method => 'get') do %>
-      <%= text_field_tag :keyword, placeholder = "キーワード検索", class: "form-control", style: "width:180px; float:left;"%>
+      <%= text_field_tag :keyword, '',placeholder: "キーワード検索", class: "form-control", style: "width:180px; float:left;"%>
       <span class="input-group-btn" style="float: right; margin-left:5px;">
         <%= button_tag 'Search',class: "btn btn-secondary" %>
       </span>
@@ -23,7 +23,6 @@
       <h1 class="display-4 mt-5 font-weight-bold">Welcome to the CMposts</h1>
       <p class="lead mt-3 font-weight-bold">CMはもっと面白く見れる！！</p>
       <%= link_to 'Sign up now', signup_path, class: 'btn btn-lg btn-danger' %>
-      </div>
     </div>
   </div>
 </div>

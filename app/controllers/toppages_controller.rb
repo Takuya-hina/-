@@ -1,7 +1,7 @@
 class ToppagesController < ApplicationController
   def index
      if logged_in?
-      @cmposts = Cmpost.all.order(id: :desc).page(params[:page]).per(20)
+      @cmposts = Cmpost.all.order(id: :desc).page(params[:page]).per(5)
      end
   end
   
