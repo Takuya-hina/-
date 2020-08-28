@@ -7,7 +7,7 @@
 	height:0;
 	padding-top: 66.7777778%;
 	position:relative;
-	background-image: url("/assets/top.png");
+	background-image: image-url("top.png");
 	background-repeat: no-repeat;
 	background-size: cover; 
 	margin-bottom:0;
