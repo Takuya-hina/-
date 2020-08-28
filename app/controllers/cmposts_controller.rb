@@ -55,7 +55,6 @@ class CmpostsController < ApplicationController
   end
   
   private
-
   def cmpost_params
     params.require(:cmpost).permit(:cm_url,:cm_title,:cm_service,:cm_music,:content)
   end

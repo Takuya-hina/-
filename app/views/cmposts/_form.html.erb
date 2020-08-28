@@ -1,44 +1,36 @@
 <div class="row">
-<div class="col-6">
-
-<%= form_with(model: cmpost, local: true) do |f| %>
-<% if cmpost.errors.any? %>
-    <div id="error_explanation" class="alert alert-warning">
-      <ul>
-        <% cmpost.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-   <div class="form-group">
-    <%= f.label :cm_url, 'Youtube URL' %>
-    <%= f.text_field :cm_url, class: 'form-control' %>
+  <div class="col-sm-8">
+    <%= form_with(model: cmpost, local: true) do |f| %>
+      <% if cmpost.errors.any? %>
+        <div id="error_explanation" class="alert alert-warning">
+          <ul>
+            <% cmpost.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :cm_url, 'Youtube URL' %>
+        <%= f.text_field :cm_url, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :cm_title, 'タイトル' %>
+        <%= f.text_field :cm_title, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :cm_service, '商品名' %>
+        <%= f.text_field :cm_service, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :cm_music, '楽曲' %>
+        <%= f.text_field :cm_music, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :content, 'エピソード' %>
+        <%= f.text_area :content, class: 'form-control', rows: 10 %>
+      </div>
+      <%= f.submit 'CMを投稿', class: 'btn btn-primary' %>
+    <% end %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :cm_title, 'タイトル' %>
-    <%= f.text_field :cm_title, class: 'form-control' %>
-  </div>
-  
-   <div class="form-group">
-    <%= f.label :cm_service, '商品名' %>
-    <%= f.text_field :cm_service, class: 'form-control' %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :cm_music, '楽曲' %>
-    <%= f.text_field :cm_music, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :content, 'エピソード' %>
-    <%= f.text_area :content, class: 'form-control', rows: 10 %>
-  </div>
-
-
-  <%= f.submit 'CMを投稿', class: 'btn btn-primary' %>
-<% end %>
-</div>
 </div>

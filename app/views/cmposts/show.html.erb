@@ -1,15 +1,15 @@
+<div class="container">
 <h1>詳細ページ</h1>
-
 <table class="table table-bordered">
   <tr>
-    <th width = "180">CM動画</th>
-    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+    <th width=150>CM動画</th>
+    <td><div class="movie-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td>
   </tr>
 </table>
   <%= render "likes/like", cmpost: @cmpost %>
 <table class="table table-bordered">
   <tr>
-    <th width = "180">タイトル</th>
+    <th width=150>タイトル</th>
     <td><%= @cmpost.cm_title %></td>
   </tr>
   <tr>
@@ -26,8 +26,10 @@
   </tr>
 </table>
 
+
 <%= link_to '一覧に戻る', root_path, class: 'btn btn-light' %>
 <% if @cmpost.user == current_user %>
 <%= link_to 'この投稿を編集する', edit_cmpost_path(@cmpost), class: 'btn btn-light' %>
 <%= link_to 'この投稿を削除する', @cmpost, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
 <% end %>
+</div>

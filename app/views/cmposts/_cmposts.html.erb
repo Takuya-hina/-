@@ -1,23 +1,23 @@
- <% if cmposts.any? %>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>タイトル</th>
-        <th>商品名</th>
-        <th>楽曲</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% cmposts.each do |cmpost| %>
+<% if cmposts.any? %>
+ <div class="row">
+   <table class="table table-striped">
+     <thead>
+       <tr>
+         <th>タイトル</th>
+         <th>商品名</th>
+         <th>楽曲</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% cmposts.each do |cmpost| %>
         <tr>
           <td><%= link_to cmpost.cm_title, cmpost %></td>
           <td><%= cmpost.cm_service %></td>
           <td><%= cmpost.cm_music %></td>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <div>
+       <% end %>
+     </tbody>
+    </table>
     <%= paginate cmposts %>
-  </div>
-<% end %>
+ </div>
+<% end %>  
