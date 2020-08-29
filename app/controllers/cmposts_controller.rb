@@ -51,7 +51,7 @@ class CmpostsController < ApplicationController
   end
   
   def ranks
-    @all_ranks = Cmpost.find(Like.group(:cmpost_id).order('count(cmpost_id) desc').limit(10).pluck(:cmpost_id))
+    @all_ranks = Cmpost.find(Like.group(:cmpost_id).order('count(cmpost_id) desc').limit(5).pluck(:cmpost_id))
   end
   
   private
