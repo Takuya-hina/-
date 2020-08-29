@@ -2,14 +2,11 @@
 <h1>詳細ページ</h1>
 <table class="table table-bordered">
   <tr>
-    <th width=150>CM動画</th>
-    <td><div class="movie-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td>
+    <th>CM動画</th>
+    <td><div class="movie-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><%= render "likes/like", cmpost: @cmpost %></td>
   </tr>
-</table>
-  <%= render "likes/like", cmpost: @cmpost %>
-<table class="table table-bordered">
   <tr>
-    <th width=150>タイトル</th>
+    <th>タイトル</th>
     <td><%= @cmpost.cm_title %></td>
   </tr>
   <tr>
