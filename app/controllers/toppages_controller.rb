@@ -2,6 +2,7 @@ class ToppagesController < ApplicationController
   def index
      if logged_in?
       @cmposts = Cmpost.all.order(id: :desc).page(params[:page]).per(10)
+      #render json: @cmposts
      end
   end
   

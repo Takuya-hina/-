@@ -1,6 +1,6 @@
 <header><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" /></header>
 <% unless current_user == cmpost.user %>
- <span class="like">
+ <div class="like">
    <% if cmpost.iine?(current_user) %>
     <%= form_for(cmpost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
      <%= button_tag(class: "btn btn-default btn-lg") do %>
@@ -21,5 +21,5 @@
       <% end %>
     <% end %>
    <% end %>
- </span>
+ </div>
 <% end %>
