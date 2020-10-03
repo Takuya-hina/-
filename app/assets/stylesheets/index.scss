@@ -1,3 +1,6 @@
+// Place all the styles related to the test controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 @charset "UTF-8";
 /*toppage index*/
 .jumbotron-fluid{
@@ -10,14 +13,9 @@
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover; 
-	background-attachment: fixed;
 	margin-bottom: 0;
-}
-.container {
-  min-width: 100%;
-  min-height: 70vh;
-  margin: 0;
-  padding: 0;
+	min-width: 100%;
+  min-height: 100vh;
 }
 p {
     margin-left: 2rem;
@@ -35,7 +33,7 @@ p {
     font-size: 6.0rem;
  }
   .sentence{
-    font-size:3.0rem;
+    font-size: 3.0rem;
  }
 }
 @media (max-width: 991.98px) {
@@ -43,7 +41,7 @@ p {
    font-size: 4.0rem;
  }
   .sentence{
-    font-size:2.5rem;
+    font-size: 2.5rem;
  }
 }
 @media (max-width: 767.98px) {
@@ -51,15 +49,15 @@ p {
     font-size: 3.0rem;
  }
   .sentence{
-    font-size:1.5rem;
+    font-size: 1.5rem;
  }
 }
 @media (max-width: 575.98px) {
   .welcome{
-    font-size: 2.0rem;
+    font-size: 2.7rem;
  }
   .sentence{
-    font-size:1.8rem;
+    font-size: 1.8rem;
  }
 }
 
@@ -68,16 +66,16 @@ p {
     font-size: 2.0rem;
  }
   .sentence{
-    font-size:1rem;
+    font-size: 1.2rem;
  }
 }
 
 @media (max-width: 375.98px) {
   .welcome{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
  }
   .sentence{
-    font-size:1rem;
+    font-size: 1.2rem;
  }
 }
 .btn{

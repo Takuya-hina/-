@@ -1,32 +1,30 @@
 <div class="container">
-<h1>詳細ページ</h1>
-<table class="table table-bordered">
-  <tr>
-    <th>CM動画</th>
-    <td><div class="movie-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><%= render "likes/like", cmpost: @cmpost %></td>
-  </tr>
-  <tr>
-    <th>タイトル</th>
-    <td><%= @cmpost.cm_title %></td>
-  </tr>
-  <tr>
-    <th>商品名</th>
-    <td><%= @cmpost.cm_service %></td>
-  </tr>
-  <tr>
-    <th>楽曲</th>
-    <td><%= @cmpost.cm_music %></td>
-  </tr>
-  <tr>
-    <th>エピソード</th>
-    <td><%= simple_format(@cmpost.content) %></td>
-  </tr>
-</table>
-
-
-<%= link_to '一覧に戻る', root_path, class: 'btn btn-light' %>
-<% if @cmpost.user == current_user %>
-<%= link_to 'この投稿を編集する', edit_cmpost_path(@cmpost), class: 'btn btn-light' %>
-<%= link_to 'この投稿を削除する', @cmpost, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
-<% end %>
+  <h1>詳細ページ</h1>
+  <table class="table table-bordered">
+   <tr>
+     <th>CM動画</th>
+     <td><div class="movie-wrap"><iframe width="100%" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><%= render "likes/like", cmpost: @cmpost %></td>
+   </tr>
+   <tr>
+     <th>タイトル</th>
+     <td><%= @cmpost.cm_title %></td>
+   </tr>
+   <tr>
+     <th>商品名</th>
+     <td><%= @cmpost.cm_service %></td>
+   </tr>
+   <tr>
+     <th>楽曲</th>
+     <td><%= @cmpost.cm_music %></td>
+   </tr>
+   <tr>
+     <th>エピソード</th>
+     <td><%= simple_format(@cmpost.content) %></td>
+   </tr>
+ </table>
+ <%= link_to '一覧に戻る', root_path, class: 'btn btn-light' %>
+ <% if @cmpost.user == current_user %>
+ <%= link_to 'この投稿を編集する', edit_cmpost_path(@cmpost), class: 'btn btn-light' %>
+ <%= link_to 'この投稿を削除する', @cmpost, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
+ <% end %>
 </div>
