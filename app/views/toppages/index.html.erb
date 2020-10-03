@@ -17,13 +17,11 @@
   <%= link_to '新規投稿の作成', new_cmpost_path, class: "btn btn-primary" %>
 </div>
 <% else %>
-<div class="row">
-  <div class="jumbotron jumbotron-fluid" id="main-jumbo">
-    <div class="cont">
-      <h1 class="display-4 mt-5 font-weight-bold">Welcome to the CMposts</h1>
-      <p class="lead mt-3 font-weight-bold">CMはもっと面白く見れる！！</p>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <p class="welcome">CMposts</p>
+      <p class="sentence">CMに込められた想いを伝えたい</p>
       <%= link_to 'Sign up now', signup_path, class: 'btn btn-lg btn-danger' %>
     </div>
   </div>
-</div>
 <% end %>
