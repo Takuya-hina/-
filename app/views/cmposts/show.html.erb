@@ -1,9 +1,10 @@
+<%= stylesheet_link_tag 'cmposts-show' %>
 <div class="container">
   <h1>詳細ページ</h1>
   <table class="table table-bordered">
    <tr>
      <th>CM動画</th>
-     <td><div class="movie-wrap"><iframe width="100%" height="315" src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><%= render "likes/like", cmpost: @cmpost %></td>
+     <td><div class="movie-wrap"><iframe src="https://www.youtube.com/embed/<%= @cmpost.cm_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><%= render "likes/like", cmpost: @cmpost %></td>
    </tr>
    <tr>
      <th>タイトル</th>
