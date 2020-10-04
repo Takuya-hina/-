@@ -19,9 +19,20 @@
   <%= link_to '新規投稿の作成', new_cmpost_path, class: "btn btn-primary" %>
 </div>
 <% else %>
-  <div class="jumbotron jumbotron-fluid">
-      <p class="welcome">CMposts</p>
-      <p class="sentence">CMに込められた想いを伝えたい</p>
-      <%= link_to 'Sign up now', signup_path, class: 'btn btn-lg btn-danger' %>
+<div class="jumbotron jumbotron-fluid">
+  <p class="welcome">CMposts</p>
+  <p class="sentence">CMに込められた想いを伝えたい</p>
+  <%= link_to 'Sign up now', signup_path, class: 'btn btn-lg btn-danger' %>
+</div>
+<section id="vison">
+  <div class="container text-center">
+    <h1 class="vison">【VISION】</h1>
+    <h2><strong>CMを、もっと面白く!!</strong></h2>
+    <h3><br>CMpostsは、あなたが心動かされたCMを共有できるアプリケーション。</br>
+     <br>いつも何気なく見るCMにもドラマがあり、それをどう感じるかは人それぞれ。</br>
+     <br>あなたのその一瞬の気持ちを残しませんか？</br>
+     <br>まずは登録から</br>
+    </h3>
+    <%= link_to 'Sign up', signup_path, class: 'btn btn-lg btn-danger' %>
   </div>
 <% end %>

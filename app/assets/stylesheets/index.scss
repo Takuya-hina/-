@@ -13,7 +13,6 @@
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover; 
-	margin-bottom: 0;
 	min-width: 100%;
   min-height: 100vh;
 }
@@ -80,6 +79,7 @@ p {
 }
 .btn{
   margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 /*cmposts show*/
 .movie-wrap {
@@ -97,4 +97,8 @@ p {
 }
 .table-bordered th{
  background-color:#f8f9fa;
+}
+
+#vison h1{
+  margin-bottom: 2rem;
 }
